@@ -13,6 +13,7 @@ angular.module('app')
     if $scope.user.id?
       UserService.save($scope.user)
     else
+      $scope.users.push($scope.user)
       UserService.create($scope.user)
 
   $scope.edit = (id) ->
