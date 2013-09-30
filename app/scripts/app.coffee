@@ -3,7 +3,7 @@
 angular.module('app', ['ngResource'])
   .config ($routeProvider) ->
     $routeProvider
-      .when '/',
+      .when '/home',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
       .when '/users',

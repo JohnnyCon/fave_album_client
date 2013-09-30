@@ -1,5 +1,30 @@
-<h2>All users</h2>
+  <div class="hero-unit">
+    <h3 class="text-muted">All User</h3>
 
-<ul>
-  <li ng-repeat="user in users">{{user.firstName}}</li>
-</ul>
+    <ul>
+      <li ng-repeat="user in users">
+      {{user.first_name}} {{user.last_name}} - <a href="" ng-click="edit(user.id)">edit</a>
+      </li>
+    </ul>
+
+    <button ng-click="new()">Add User</button>
+
+    <div ng-show="editMode">
+      <br>
+      <h3>add user</h2>
+      <form class="form-inline">
+          <label for="first_name">first name</label>
+          <input name="first_name" id="first_name" ng-model="user.first_name">
+
+          <label for="last_name">last name</label>
+          <input name="last_name" id="last_name" ng-model="user.last_name">
+
+          <button ng-click="save(user)">Save</button>
+      </form>
+    </div>
+
+
+  </div>
+
+
+

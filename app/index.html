@@ -25,9 +25,21 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <a href="/">Home</a> | <a href="/#/users">Users</a>
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container">
+      <div>
+        <div class="header">
+          <ul class="nav nav-pills pull-left">
+            <li><a href="/#/home">Home</a></li>
+            <li><a href="/#/users">Users</a></li>
+          </ul>
+        </div>
+      </div>
+
+    
+      <!-- Add your site or application content here -->
+      <div ng-view=""></div>
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -69,7 +81,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/users.js"></script>
-        <script src="scripts/services/users.js"></script>
+        <script src="scripts/services/user.js"></script>
         <!-- endbuild -->
 </body>
 </html>
